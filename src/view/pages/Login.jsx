@@ -1,5 +1,7 @@
+import { Container } from '../components/Container/Container'
+
 export const Login = () => {
   return (
-    <h1>Login</h1>
+    <Container />
   )
 }
