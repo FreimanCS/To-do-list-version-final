@@ -1,24 +1,30 @@
-.todo-form {
-    padding: 20px;
+.login-form {
+    padding: 40px;
     border-radius: 10px; display: flex;
     flex-direction: column;
     gap: 10px;
     background-color: #ffffff4e;
-    margin-bottom: 40px;
+   
 }
 
-.todo-form__title {
+.login-form__title {
     text-align: center;
 }
-.todo-form__section{
+.login-form__subtitle {
+    text-align: center;
+    font-size: 1rem;
+}
+.login-form__section{
     border: none;
     margin: 0;
     padding: 0;
     display: grid;
     grid-template-columns: repeat (2, 1fr);
     gap: 10px;
+ 
+
 }
-.todo-form__input {
+.login-form__input {
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -29,6 +35,10 @@ input, textarea {
     padding: 15px;
     border-radius: 10px;
 }
-.todo-form__sectio--row {
+.login-form__sectio--row {
     grid-template-columns: 1fr;
 }
+.login-form__button{
+    margin: 40px 0 20px 0;
+}
+
