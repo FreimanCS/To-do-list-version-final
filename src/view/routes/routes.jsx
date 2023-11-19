@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom'
-import { Home } from '../pages/Home.jsx'
 import { Login } from '../pages/login.jsx'
+import { TodoPage } from '../pages/TodoPage.jsx'
 import { Layout } from '../components/Layout/Layout.jsx'
 
 export const router = createBrowserRouter([
@@ -10,7 +10,7 @@ export const router = createBrowserRouter([
     children: [
       {
         path: '',
-        Component: Home
+        Component: TodoPage
       },
       {
         path: 'login',

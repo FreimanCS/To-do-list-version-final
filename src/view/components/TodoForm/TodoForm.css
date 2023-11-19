@@ -1,0 +1,34 @@
+.todo-form {
+    padding: 20px;
+    border-radius: 10px; display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #ffffff4e;
+    margin-bottom: 40px;
+}
+
+.todo-form__title {
+    text-align: center;
+}
+.todo-form__section{
+border: none;
+margin: 0;
+padding: 0;
+display: grid;
+grid-template-columns: repeat (2, 1fr);
+gap: 10px;
+}
+.todo-form__input {
+display: flex;
+flex-direction: column;
+gap: 5px;
+}
+input, textarea {
+border: none;
+outline: none;
+padding: 15px;
+border-radius: 10px;
+}
+.todo-form__sectio--row {
+grid-template-columns: 1fr;
+}

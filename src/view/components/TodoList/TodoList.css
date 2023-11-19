@@ -1,0 +1,16 @@
+table {
+    width: 100%;
+}
+th {
+    background-color: #ffffff53;
+}
+
+th, td{
+    padding: 10px;
+}
+td:last-of-type{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+} 
