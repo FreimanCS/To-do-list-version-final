@@ -16,7 +16,7 @@ export const LoginForm = () => {
         </div>
       </fieldset>
       <button className='login-form__button' type='submit'>Iniciar sesión</button>
-      <h3 className='login-form__subtitle'>¿No tienes una cuenta? ESTUPIDO! JAJAJAJA. <Link to='/signup'>Registrate aqui</Link> </h3>
+      <h3 className='login-form__subtitle'>¿No tienes una cuenta? ESTUPIDO! JAJAJAJA. <Link to='/signup' className='login-form__subtitle__link'>Registrate aquí.</Link> </h3>
     </form>
 
   )
