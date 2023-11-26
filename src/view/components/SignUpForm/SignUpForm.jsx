@@ -23,8 +23,6 @@ export const SignUpForm = () => {
     })
       .then(response => response.json())
       .then(response => {
-        /* Esta marimonda no funciona, sale un error en el API :/ */
-        window.alert('Se creo la tarea: ' + response.todo.name)
         setTodos([...todos, response.todo])
         event.target.reset()
       })

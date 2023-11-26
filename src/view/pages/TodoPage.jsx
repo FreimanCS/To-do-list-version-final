@@ -5,17 +5,17 @@ import { TodosContext } from '../../context/todo.jsx'
 import { TodoForm } from '../components/TodoForm/TodoForm.jsx'
 
 export const TodoPage = () => {
-  const { todos, setTodos } = useContext(TodosContext)
+  const { state, setState } = useContext(TodosContext)
 
   useEffect(() => {
     fetch('https://birsbane-numbat-zjcf.1.us-1.fl0.io/api/todo')
       .then(response => response.json())
-      .then(response => setTodos(response.todos))
+      .then(response => setState({ ...state, todos: response.todos }))
   }, [])
   return (
     <Container>
       <TodoForm />
-      <TodoList todos={todos} />
+      <TodoList todos={state.todos} />
     </Container>
   )
 }
