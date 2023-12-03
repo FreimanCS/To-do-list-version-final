@@ -29,7 +29,7 @@ export const SignUpForm = () => {
   }
   return (
     <form onSubmit={handleSubmit} className='signup-form'>
-      <h2 className='signup-form__title'>Bienvenido perrito</h2>
+      <h2 className='signup-form__title'>Crear una cuenta</h2>
       <fieldset className='signup-form__section'>
         <div className='signup-form__input'>
           <label htmlFor=''>Nombres</label>
@@ -49,7 +49,7 @@ export const SignUpForm = () => {
         </div>
       </fieldset>
       <button className='signup-form__button' type='submit'>Crear cuenta</button>
-      <h3 className='signup-form__subtitle'>¿Ya tienes una cuenta? Bien, bacano. <Link to='/login' className='signup-form__subtitle__link'>Inicia sesión aquí.</Link> </h3>
+      <h3 className='signup-form__subtitle'>¿Ya tienes una cuenta? <Link to='/login' className='signup-form__subtitle__link'>Inicia sesión aquí.</Link> </h3>
     </form>
 
   )

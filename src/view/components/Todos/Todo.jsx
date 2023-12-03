@@ -21,13 +21,14 @@ export const Todo = ({ todo }) => {
       })
   }
   return (
-    <div className='todos_display'>
-      <p id='todo_name'>{todo.name}</p>
-      <p id='todo_date'>{todo.finishDate.split('T')[0]}</p>
-      <div className='buttons'>
-        <button id='edit_button' onClick={() => setState({ ...state, currentTodo: todo })}><FaRegEdit /></button>
-        <button id='trash_button' onClick={handleDelete}><BsTrash3 /></button>
-      </div>
-    </div>
+    <tr className='todo_display'>
+      <td id='todo_name'>{todo.name}</td>
+      <td id='todo_dscription'>{todo.description}</td>
+      <td id='todo_date'>{todo.finishDate.split('T')[0]}</td>
+      <td className='buttons'>
+        <button onClick={() => setState({ ...state, currentTodo: todo })}><FaRegEdit className='edit-icon' /></button>
+        <button onClick={handleDelete}><BsTrash3 className='trash-icon' /></button>
+      </td>
+    </tr>
   )
 }

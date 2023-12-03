@@ -30,7 +30,7 @@ export const LoginForm = () => {
   }
   return (
     <form onSubmit={handleSubmit} className='login-form'>
-      <h2 className='login-form__title'>No dudamos que seas tu, bueno... quizas un poco</h2>
+      <h2 className='login-form__title'>Inicio de sesión</h2>
       <fieldset className='todo-form__section'>
         <div className='login-form__input'>
           <label htmlFor=''>Correo</label>
@@ -42,7 +42,7 @@ export const LoginForm = () => {
         </div>
       </fieldset>
       <button className='login-form__button' type='submit'>Iniciar sesión</button>
-      <h3 className='login-form__subtitle'>¿No tienes una cuenta? ESTUPIDO! JAJAJAJA. <Link to='/signup' className='login-form__subtitle__link'>Registrate aquí.</Link> </h3>
+      <h3 className='login-form__subtitle'>¿No tienes una cuenta? <Link to='/signup' className='login-form__subtitle__link'>Registrate aquí.</Link> </h3>
     </form>
 
   )

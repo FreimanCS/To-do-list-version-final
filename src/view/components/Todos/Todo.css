@@ -1,15 +1,19 @@
+#todo_display{
+    width: 100%;
+}
 #todo_name{
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
+
 #todo_date{
-    float:right;
+    left: 10%;
 }
-#todo_status{
-
+.trash_button{
+    font-size: 2rem;
 }
-#edit_button{
-
+.edit_button{
+    font-size: 2rem;
 }
-#trash_button{
-
+#buttons{
+    left:0;
 }
