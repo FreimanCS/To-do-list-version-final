@@ -60,24 +60,19 @@ export const TodoForm = () => {
       <h2 className='todo-form__title'>{text} una tarea</h2>
       <fieldset className='todo-form__section'>
         <div className='todo-form__input'>
-          <label htmlFor='name'>Tarea</label>
-          <input type='text' name='name' required defaultValue={state.currentTodo ? state.currentTodo.name : ''} />
+          <input type='text' name='name' className='someinput' id='nombre_tarea' placeholder='Nombre de la tarea' required defaultValue={state.currentTodo ? state.currentTodo.name : ''} />
         </div>
         <div className='todo-form__input'>
-          <label htmlFor='finishDate'>Fecha</label>
-          <input type='date' name='finishDate' required defaultValue={state.currentTodo ? state.currentTodo.finishDate.split('T')[0] : ''} />
+          <textarea name='description' id='description' className='someinput' cols='' rows='' placeholder='Descripción' defaultValue={state.currentTodo ? state.currentTodo.description : ''} />
         </div>
         <div className='todo-form__input'>
-          <label htmlFor='isCompleted'>Completado </label>
-          <input type='checkbox' name='isCompleted' defaultValue={state.currentTodo ? state.currentTodo.isCompleted : ''} />
+          <input type='date' name='finishDate' className='someinput' required id='fecha' defaultValue={state.currentTodo ? state.currentTodo.finishDate.split('T')[0] : ''} />
+        </div>
+        <div className='todo-form__input'>
+          <input type='radio' name='isCompleted' className='someinput' id='checkbox' defaultValue={state.currentTodo ? state.currentTodo.isCompleted : ''} />
         </div>
       </fieldset>
-      <fieldset className='todo-form__section todo-form__section--row'>
-        <div className='todo-form__input'>
-          <label htmlFor='description'>Descripción</label>
-          <textarea name='description' id='description' cols='' rows='' defaultValue={state.currentTodo ? state.currentTodo.description : ''} />
-        </div>
-      </fieldset>
+      <fieldset className='todo-form__section todo-form__section--row' />
       <button type='submit'>{text}</button>
     </form>
   )

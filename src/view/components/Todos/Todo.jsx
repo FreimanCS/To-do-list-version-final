@@ -1,6 +1,8 @@
 import './Todo.css'
 import { useContext } from 'react'
 import { TodosContext } from '../../../context/todo'
+import { BsTrash3 } from 'react-icons/bs'
+import { FaRegEdit } from 'react-icons/fa'
 
 export const Todo = ({ todo }) => {
   const { state, setState } = useContext(TodosContext)
@@ -15,18 +17,17 @@ export const Todo = ({ todo }) => {
       .then(response => response.json())
       .then(response => {
         window.alert('Se elimino esa retromonda llamada' + response.todo.name)
-        setState({ ...state, todos: state.todos.filter(todo => todo._id !== response.todo._id) })
+        setState({ ...state, todos: state.todos.filter(todo => todo._id !== response.todo._) })
       })
   }
   return (
-    <tr>
-      <td>{todo.name}</td>
-      <td>{todo.finishDate.split('T')[0]}</td>
-      <td>{todo.isCompleted}</td>
-      <td>
-        <button onClick={() => setState({ ...state, currentTodo: todo })}>Editar</button>
-        <button onClick={handleDelete}>Eliminar</button>
-      </td>
-    </tr>
+    <div className='todos_display'>
+      <p id='todo_name'>{todo.name}</p>
+      <p id='todo_date'>{todo.finishDate.split('T')[0]}</p>
+      <div className='buttons'>
+        <button id='edit_button' onClick={() => setState({ ...state, currentTodo: todo })}><FaRegEdit /></button>
+        <button id='trash_button' onClick={handleDelete}><BsTrash3 /></button>
+      </div>
+    </div>
   )
 }

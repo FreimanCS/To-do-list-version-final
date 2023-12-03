@@ -48,5 +48,6 @@ input, textarea {
 .login-form__subtitle__link:hover{
     color: white
 }
-
-
+.form__button__link{
+    color: white;
+}
